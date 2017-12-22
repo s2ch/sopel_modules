@@ -7,7 +7,7 @@ if sys.version_info.major >= 3:
     unichr = chr
 
 
-@commands('zalupa', 'залупа')
+@commands('zalupa', 'залупа', 'залупу')
 def penisskin(bot, trigger):
     if not trigger.group(2):
         bot.action(u'повесил {}залупу на воротник.'.format(trigger.nick))
