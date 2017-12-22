@@ -5,9 +5,9 @@ import time
 from sopel import module
 
 
-def what(bot, input):
+def help(bot, input):
     bot.say('Help: https://raw.githubusercontent.com/s2ch/sopel_mods/master/commands.txt')
-what.commands = ['help', 'halp', 'commands', 'cmds', 'хелп', 'халп', 'комманды', 'справка']
+help.commands = ['help', 'halp', 'commands', 'cmds', 'хелп', 'халп', 'комманды', 'справка']
 
 
 def elita(bot, input):
