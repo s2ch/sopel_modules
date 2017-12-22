@@ -6,7 +6,7 @@ from sopel import module
 
 
 def help(bot, input):
-    bot.say('Help: https://raw.githubusercontent.com/s2ch/sopel_mods/master/commands.txt')
+    bot.say('Help: https://raw.githubusercontent.com/s2ch/sopel_modules/master/commands.txt')
 help.commands = ['help', 'halp', 'commands', 'cmds', 'хелп', 'халп', 'комманды', 'справка']
 
 
