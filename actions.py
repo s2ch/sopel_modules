@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from random import choice
 import time
 from sopel import module
@@ -15,6 +13,13 @@ def elita(bot, input):
     bot.say('┴─┴')
     bot.say('ಠ_ರೃ')
 elita.commands = ['elita', 'элита']
+
+
+def aelita(bot, input):
+    bot.say('3... 2... 1...')
+    bot.say('To the MARS!')
+    bot.say('(⌐■_■)')
+aelita.commands = ['aelita', 'аэлита']
 
 
 def dunno(bot, input):
