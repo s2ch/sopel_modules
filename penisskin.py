@@ -1,5 +1,3 @@
-# coding=utf8
-
 from __future__ import unicode_literals, absolute_import, print_function, division
 import sys
 
@@ -16,7 +14,7 @@ def penisskin(bot, trigger):
         return
 
     target = trigger.group(2)
-    bot.action(u'С гордостью повесил залупу на воротник {}!' ' C любовью от {}!'.format(target, trigger.nick))
+    bot.action(u'С гордостью повесил залупу на воротник {}!'' C любовью от {}!'.format(target, trigger.nick))
     return
 
 if __name__ == '__main__':
