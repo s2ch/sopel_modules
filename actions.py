@@ -5,6 +5,11 @@ import time
 from sopel import module
 
 
+def what(bot, input):
+    bot.say('Help: https://raw.githubusercontent.com/s2ch/sopel_mods/master/commands.txt')
+what.commands = ['help', 'halp', 'commands', 'cmds', 'хелп', 'халп', 'комманды', 'справка']
+
+
 def elita(bot, input):
     bot.say('┌─┐')
     bot.say('┴─┴')
@@ -57,7 +62,7 @@ hi.commands = ['hi', 'hello', 'greetings', 'hola', 'bonjour', 'хай']
 
 def yay(bot, input):
     bot.say('\o/')
-yay.commands = ['yay', 'woot', 'w00t', 'friday', 'йай']
+yay.commands = ['yay', 'woot', 'w00t', 'friday', 'йай', 'пятница']
 
 
 def rickroll(bot, input):
