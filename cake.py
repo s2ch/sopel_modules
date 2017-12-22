@@ -1,5 +1,3 @@
-# coding=utf8
-
 from __future__ import unicode_literals, absolute_import, print_function, division
 import sys
 
@@ -9,7 +7,7 @@ if sys.version_info.major >= 3:
     unichr = chr
 
 
-@commands('cake', 'торт', 'тортик')
+@commands('cake', 'торт', 'тортик', 'торта')
 def cake(bot, trigger):
     if not trigger.group(2):
         bot.action(u'дал {}кусочек пирога и стакан тёплого молока. '
