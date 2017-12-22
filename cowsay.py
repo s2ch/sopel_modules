@@ -57,4 +57,4 @@ def cowsay_cmd(bot, input):
         moo = cowsay(input_text)
         for l in moo.rsplit('\n'):
             bot.say(l)
-cowsay_cmd.commands = ['cow', 'cowsay', 'корова']
+cowsay_cmd.commands = ['cow', 'cowsay', 'корова', 'корову']
