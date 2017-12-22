@@ -17,7 +17,7 @@ elita.commands = ['elita', 'элита']
 
 def aelita(bot, input):
     bot.say('3... 2... 1...')
-    bot.say('To the MARS!')
+    bot.say('To MARS!')
     bot.say('(⌐■_■)')
 aelita.commands = ['aelita', 'аэлита']
 
