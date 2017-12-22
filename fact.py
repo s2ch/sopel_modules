@@ -1,7 +1,7 @@
 import sopel
 import random
 
-@sopel.module.commands('fact', 'факт')
+@sopel.module.commands('fact', 'факт', 'факты')
 def fact(bot, trigger):
     x = [
         "Аниме для пидоров!",
