@@ -58,7 +58,8 @@ def get_gel_data(terms,pid=None):
         return BeautifulSoup(requests.get(url).content), tags
     except:
         return
-
+total = 0
+tags = ''
 @sopel.module.commands('gel', 'gelbooru')
 @sopel.module.example('.gelbooru search_term or .gelbooru safe search_term')
 def gel(bot, trigger):
@@ -66,14 +67,17 @@ def gel(bot, trigger):
         return bot.say("Enter a search term.")
     search_term = trigger.split(' ')
     search_term.pop(0)
+    global tags
     bs, tags = get_gel_data(search_term)
     if not bs:
         return
     if bs.find_all('posts')[0].get('count') == '0':
-        return bot.say('Nothing...')
+        # return bot.say('Nothing...')
+        pass
     else:
+        global total
         total = bs.findAll('posts')[0].get('count')
-        bot.say('[{0} found] http://gelbooru.com/index.php?page=post&s=list&tags={1}'.format(total, tags))
+        # bot.say('[{0} found] http://gelbooru.com/index.php?page=post&s=list&tags={1}'.format(total, tags))
 
 @sopel.module.commands('gbr', 'gelbooru', 'гельбору')
 @sopel.module.example('.gbr search_term or .gbr safe search_term')
@@ -90,7 +94,8 @@ def gbr(bot, trigger):
             pid = random.choice(range(i))
         except:
             pid = 0
-        bs,tags2 = get_gel_data(search_term,pid)
+        global tags
+        bs,tags = get_gel_data(search_term,pid)
         if not bs.find_all('post'):
             if i <= 0:
                 return bot.say("Nothing...")
@@ -106,8 +111,10 @@ def gbr(bot, trigger):
         lewdness = 'Semi-NSFW'
     elif rating == 'e':
         lewdness = 'NSFW'
-    resolution = "{0}x{1}".format(choosen.get('height'),choosen.get('width'))
-    score = choosen.get('score')
-    tags = choosen.get('tags').split()
-    url = 'http://gelbooru.com/index.php?page=post&s=view&id={0}'.format(choosen.get('id'))
-    bot.say('[{0}] {1} Resolution: {2}|Score: {3}|Tags: {4}'.format(lewdness,url,resolution,score,", ".join(random.sample(tags,6)) if len(tags) > 6 else ", ".join(tags)))
+    # resolution = "{0}x{1}".format(choosen.get('height'),choosen.get('width'))
+    # score = choosen.get('score')
+    # tags = choosen.get('tags').split()
+    # url = 'http://gelbooru.com/index.php?page=post&s=view&id={0}'.format(choosen.get('id'))
+    url = '{0}'.format(choosen.get('sample_url'))
+    # bot.say('[{0}] {1} Resolution: {2}|Score: {3}|Tags: {4}'.format(lewdness,url,resolution,score,", ".join(random.sample(tags,6)) if len(tags) > 6 else ", ".join(tags)))
+    bot.say('[{0}] {1} [{2} found] http://gelbooru.com/index.php?page=post&s=list&tags={3}'.format(lewdness,url,total,tags))
