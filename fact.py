@@ -4,7 +4,7 @@ import random
 @sopel.module.commands('fact', 'факт', 'факты')
 def fact(bot, trigger):
     x = [
-        "Аниме для пидоров!",
+        "Аниме лудше пидоров!",
         "Гном - лучшее ДЕ!"
         ]
 
