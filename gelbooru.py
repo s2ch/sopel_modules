@@ -79,7 +79,7 @@ def gel(bot, trigger):
         total = bs.findAll('posts')[0].get('count')
         # bot.say('[{0} found] http://gelbooru.com/index.php?page=post&s=list&tags={1}'.format(total, tags))
 
-@sopel.module.commands('gbr', 'gelbooru', 'гельбору')
+@sopel.module.commands('gbr', 'gelbooru', 'gel', 'гель', 'гельбору')
 @sopel.module.example('.gbr search_term or .gbr safe search_term')
 def gbr(bot, trigger):
     if not trigger.group(2):
