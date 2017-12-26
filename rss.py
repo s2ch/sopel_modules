@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from sopel.config.types import StaticSection, ListAttribute, ValidatedAttribute
 from sopel.logger import get_logger
@@ -16,7 +14,7 @@ LOGGER = get_logger(__name__)
 
 MAX_HASHES_PER_FEED = 300
 
-UPDATE_INTERVAL = 60 # seconds
+UPDATE_INTERVAL = 60
 
 ESCAPE_CHARACTER = '%'
 

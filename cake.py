@@ -10,7 +10,7 @@ if sys.version_info.major >= 3:
 @commands('cake', 'торт', 'тортик', 'торта')
 def cake(bot, trigger):
     if not trigger.group(2):
-        bot.action(u'дал {}кусочек пирога и стакан тёплого молока. '
+        bot.action(u'дал {} кусочек пирога и стакан тёплого молока. '
                     '\U0001F382'.format(trigger.nick))
         return
 

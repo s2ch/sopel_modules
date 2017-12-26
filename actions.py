@@ -8,6 +8,11 @@ def help(bot, input):
 help.commands = ['help', 'halp', 'commands', 'cmds', 'хелп', 'халп', 'комманды', 'справка']
 
 
+def tv(bot, input):
+    bot.say('TV: rtmp-поток https://hls.goodgame.ru/hls/137834.m3u8 | web https://goodgame.ru/channel/swastika/')
+tv.commands = ['tv', 'тв', 'stream', 'стрим']
+
+
 def elita(bot, input):
     bot.say('┌─┐')
     bot.say('┴─┴')
@@ -41,7 +46,7 @@ what.commands = ['what', 'чё']
 
 def facepalm(bot, input):
     bot.say('(>ლ)')
-facepalm.commands = ['facepalm', 'рукалицо', 'фейспалм', 'фейспальм']
+facepalm.commands = ['facepalm', 'рукалицо', 'фейспалм', 'фейспальм', 'фэйспалм', 'фэйспальм']
 
 
 def ping(bot, input):
@@ -62,7 +67,7 @@ test.commands = ['test', 'тест']
 def hi(bot, input):
     choices = ['o/', '\o']
     bot.say(choice(choices))
-hi.commands = ['hi', 'hello', 'greetings', 'hola', 'bonjour', 'хай']
+hi.commands = ['hi', 'hello', 'greetings', 'hola', 'bonjour', 'хай', 'зигу']
 
 
 def yay(bot, input):
