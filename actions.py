@@ -13,6 +13,11 @@ def tv(bot, input):
 tv.commands = ['tv', 'тв', 'stream', 'стрим']
 
 
+def radio(bot, input):
+    bot.say('Radio: http://radio.s2ch.ga:38000/stream.ogg | http://radio.s2ch.ga:38000/stream.mp3')
+radio.commands = ['radio', 'радио', 'радива']
+
+
 def elita(bot, input):
     bot.say('┌─┐')
     bot.say('┴─┴')
