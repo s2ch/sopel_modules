@@ -1347,7 +1347,7 @@ class Options:
 
                     # add the color escape character
                     irc += ESCAPE_COLOR
-                           
+
                     # add a foreground color
                     irc += key
 
