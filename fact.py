@@ -11,14 +11,23 @@ def random_line(afile):
 
 @sopel.module.commands('fact', 'факт', 'факты')
 def fact(bot, trigger):
-    x = [
-        # "Аниме лудше пидоров!",
-        # "Гном - лучшее ДЕ!"
-        "hi"
-        ]
-
-
-#    bot.say("ФактЪ: {}".format(random.choice(x)))
-    factfile = open('/home/sopel/.sopel/modules/fact.txt')
-    bot.say("ФактЪ: {}".format(random_line(factfile)))
+    filepath = '/home/sopel/.sopel/modules/fact.txt'
+    if trigger.group(2) is None:
+        factfile = open(filepath, 'r')
+        bot.say("ФактЪ: {}".format(random_line(factfile)))
+        factfile.close()
+        return
+    if trigger.group(2).startswith('add'):
+        newline = trigger.group(2)[4:] + '\n'
+        factfile = open(filepath, 'r')
+        if newline in factfile.read():
+            bot.say('И так знаю!')
+            factfile.close()
+            return
+        factfile = open(filepath, 'a')
+        factfile.write(trigger.group(2)[4:] + '\n')
+        bot.say('Записал!')
+    else:
+        factfile = open(filepath, 'r')
+        bot.say("ФактЪ: {}".format(random_line(factfile)))
     factfile.close()
